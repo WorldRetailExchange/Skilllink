@@ -1,0 +1,64 @@
+Fix New Issues on SkillLink Website (Post-Initial Corrections)
+We’ve already given you creative direction, color palette, and interaction corrections in the last prompt. Now, after reviewing the latest deployed version, here are new issues that need to be addressed:
+
+🧭 NAVBAR (New Issues)
+Menu spacing is uneven — there’s too much padding on one side; align items center.
+
+The button layout breaks on mobile — please fix responsive navbar collapse and spacing.
+
+Add hover underline animation or slight scale-up on hover for menu items.
+
+🏠 HERO SECTION (New Issues)
+The main image is still pixelated and misaligned on larger screens. Use a better quality PNG or SVG, and anchor it to the right with correct aspect ratio.
+
+On small screens, the image overlaps the CTA — adjust mobile layout with flex-wrap: wrap-reverse.
+
+Add motion or scroll-triggered animation to the main CTA or headline to bring life to the section.
+
+🔄 SECTION TRANSITIONS
+There is no visual transition between sections (hero → about → features, etc.).
+➤ Add background gradient breaks, diagonal cuts, or simple animations to create flow.
+
+✅ CHECKBOXES + ICONS (New Issues)
+On the Student Portfolio page, the new checkboxes appear tiny or hard to tap on mobile. Please increase size and padding for mobile UX.
+
+Icons used in skill badges and features still feel generic.
+➤ Please use a consistent flat icon set or playful emoji-style icon pack across the site.
+
+🧑‍🎓 STUDENT BENEFITS SECTION
+The layout for Students, Parents, and Providers stacks awkwardly on tablets. Make the cards behave better in 2-column view before going full stack.
+
+The text alignment within each benefit box is inconsistent.
+
+Backgrounds are still too pale, some with low contrast — brighten them with our palette (Cyan, Pink, Gold).
+
+📱 RESPONSIVENESS
+Buttons and sections still overflow on small devices (check on iPhone SE or Galaxy Fold view).
+
+Icons and image sizes don’t scale cleanly — apply max-width: 100% and consistent padding across all sections.
+
+📢 TESTIMONIALS SECTION
+Add user avatars or student names for authenticity.
+
+Use soft cards with shadows or rounded containers instead of plain text.
+
+📊 SUGGESTED NEW ENHANCEMENTS
+Add scroll-triggered animations using simple JS or CSS libraries like AOS.
+
+Add a floating CTA button for mobile (e.g. “Join Beta” or “Explore Now”).
+
+🚀 Goal
+We want the website to now feel:
+
+✨ Animated (not static)
+
+🎯 More responsive and balanced
+
+👦🏼 Visually designed for students (10–18)
+
+📱 Mobile-first and touch friendly
+
+🎨 Fully aligned with the brand palette and UI style
+
+Let us know if you need icons, image suggestions, or layout mockups — we’re happy to support further.
+
