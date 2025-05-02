@@ -3,7 +3,7 @@ import { fadeIn } from "@/lib/motion";
 
 const Features = () => {
   return (
-    <section id="features" className="bg-[#FFF2EC] py-20">
+    <section id="features" className="bg-white py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -30,10 +30,10 @@ const Features = () => {
             variants={fadeIn("right", "tween", 0.2, 1)}
           >
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-              <div className="bg-gradient-to-r from-[#FF5522] to-[#FFCB05] h-3"></div>
+              <div className="bg-gradient-to-r from-pink to-gold h-3"></div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="bg-[#FFCB05] p-4 rounded-full text-white mr-4">
+                  <div className="bg-gradient-to-r from-pink to-gold p-4 rounded-full text-white mr-4 shadow-md">
                     <span className="text-2xl">🏅</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800">Skill Badges + Points</h3>
@@ -44,25 +44,25 @@ const Features = () => {
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                   <div className="text-center">
-                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-blue-100 flex items-center justify-center">
+                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-blue-100 flex items-center justify-center shadow-md">
                       <span className="text-xl">📚</span>
                     </div>
                     <p className="text-sm font-medium">Reading</p>
                   </div>
                   <div className="text-center">
-                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-green-100 flex items-center justify-center">
+                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-green-100 flex items-center justify-center shadow-md">
                       <span className="text-xl">🧪</span>
                     </div>
                     <p className="text-sm font-medium">Science</p>
                   </div>
                   <div className="text-center">
-                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-purple-100 flex items-center justify-center">
+                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-purple-100 flex items-center justify-center shadow-md">
                       <span className="text-xl">🎨</span>
                     </div>
                     <p className="text-sm font-medium">Art</p>
                   </div>
                   <div className="text-center">
-                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-yellow-100 flex items-center justify-center">
+                    <div className="h-16 w-16 mx-auto mb-2 rounded-full bg-yellow-100 flex items-center justify-center shadow-md">
                       <span className="text-xl">⚽</span>
                     </div>
                     <p className="text-sm font-medium">Sports</p>
@@ -71,19 +71,35 @@ const Features = () => {
                 
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="text-primary text-xl mr-3">⭐</span>
+                    <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Earn colorful badges for completing different activities and challenges</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary text-xl mr-3">⭐</span>
+                    <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Collect SkillPoints to level up and unlock special rewards</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary text-xl mr-3">⭐</span>
+                    <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Track progress with visual learning paths and milestone celebrations</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary text-xl mr-3">⭐</span>
+                    <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Share achievements with friends and on your student portfolio</p>
                   </li>
                 </ul>
@@ -100,10 +116,10 @@ const Features = () => {
             variants={fadeIn("left", "tween", 0.2, 1)}
           >
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-              <div className="bg-gradient-to-r from-[#E5F3FF] to-[#1A1A1A] h-3"></div>
+              <div className="bg-gradient-to-r from-cyan to-[#2980b9] h-3"></div>
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <div className="bg-[#1A1A1A] p-4 rounded-full text-white mr-4">
+                  <div className="bg-gradient-to-r from-cyan to-[#2980b9] p-4 rounded-full text-white mr-4 shadow-md">
                     <span className="text-2xl">🤝</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800">Community & Collaboration</h3>
@@ -125,19 +141,35 @@ const Features = () => {
                 
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="text-[#1A1A1A] text-xl mr-3">⭐</span>
+                    <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Join student-led clubs and interest groups in your neighborhood</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#1A1A1A] text-xl mr-3">⭐</span>
+                    <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Discover book circles, coding clubs, and creative workshops</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#1A1A1A] text-xl mr-3">⭐</span>
+                    <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Create your own group and invite others with similar interests</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#1A1A1A] text-xl mr-3">⭐</span>
+                    <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                     <p>Safe, moderated spaces for students to collaborate and grow together</p>
                   </li>
                 </ul>

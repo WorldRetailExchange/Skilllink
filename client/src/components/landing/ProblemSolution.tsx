@@ -23,34 +23,50 @@ const CoreFeatures = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div 
             id="portfolio"
-            className="bg-[#FFF2EC] rounded-xl p-8 shadow-md"
+            className="bg-gradient-to-b from-white to-[#FFE8F0] rounded-xl p-8 shadow-lg"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             variants={fadeIn("up", "tween", 0.2, 1)}
           >
             <div className="flex items-start mb-6">
-              <div className="bg-primary p-4 rounded-full text-white mr-4">
+              <div className="bg-gradient-to-r from-pink to-cyan p-4 rounded-full text-white mr-4 shadow-md">
                 <span className="text-2xl">🎓</span>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mt-1">Student Portfolio</h3>
             </div>
             <p className="text-gray-600 mb-6">Like LinkedIn for students - build your digital learning identity</p>
             <ul className="space-y-4">
-              <li className="flex">
-                <i className="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Personal profile with school, interests and accomplishments</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Track your skill badges and SkillPoints</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Showcase class history and events attended</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-primary mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-pink/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-pink" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Gamified progress path to reward achievements</p>
               </li>
             </ul>
@@ -65,34 +81,50 @@ const CoreFeatures = () => {
 
           <motion.div 
             id="events"
-            className="bg-[#E5F3FF] rounded-xl p-8 shadow-md"
+            className="bg-gradient-to-b from-white to-[#FEFFD9] rounded-xl p-8 shadow-lg"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             variants={fadeIn("up", "tween", 0.3, 1)}
           >
             <div className="flex items-start mb-6">
-              <div className="bg-[#FFCB05] p-4 rounded-full text-white mr-4">
+              <div className="bg-gradient-to-r from-gold to-chili p-4 rounded-full text-white mr-4 shadow-md">
                 <span className="text-2xl">🎟️</span>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mt-1">Events Marketplace</h3>
             </div>
             <p className="text-gray-600 mb-6">Like BookMyShow - discover and join exciting local events</p>
             <ul className="space-y-4">
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#FFCB05] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-gold/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Browse workshops, meetups, coding camps and more</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#FFCB05] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-gold/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Book and join events with one click</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#FFCB05] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-gold/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Host your own events as clubs or individuals</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#FFCB05] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-gold/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Calendar integration for easy scheduling</p>
               </li>
             </ul>
@@ -107,34 +139,50 @@ const CoreFeatures = () => {
 
           <motion.div 
             id="tutors"
-            className="bg-[#FFF2EC] rounded-xl p-8 shadow-md"
+            className="bg-gradient-to-b from-white to-[#DAFFF9] rounded-xl p-8 shadow-lg"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             variants={fadeIn("up", "tween", 0.4, 1)}
           >
             <div className="flex items-start mb-6">
-              <div className="bg-[#1A1A1A] p-4 rounded-full text-white mr-4">
+              <div className="bg-gradient-to-r from-cyan to-[#2980b9] p-4 rounded-full text-white mr-4 shadow-md">
                 <span className="text-2xl">👨‍🏫</span>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mt-1">Tutor Discovery</h3>
             </div>
             <p className="text-gray-600 mb-6">Find qualified, verified local tutors for any subject or skill</p>
             <ul className="space-y-4">
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#1A1A1A] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Search by subject, location, and availability</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#1A1A1A] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>View tutor profiles with reviews and ratings</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#1A1A1A] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Book sessions directly through the platform</p>
               </li>
-              <li className="flex">
-                <i className="fas fa-check-circle text-[#1A1A1A] mt-1 mr-3"></i>
+              <li className="flex items-start">
+                <div className="bg-cyan/10 p-2 rounded-full mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-cyan" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
                 <p>Safe, in-app communication system</p>
               </li>
             </ul>

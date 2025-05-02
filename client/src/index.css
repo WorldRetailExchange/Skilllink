@@ -3,56 +3,115 @@
 @tailwind utilities;
 
 :root {
-  --skilllink-peach: #FFF2EC;
-  --skilllink-yellow: #FFCB05;
-  --skilllink-blue: #E5F3FF;
-  --skilllink-coral: #FF5522;
-  --skilllink-navy: #1A1A1A;
+  --skilllink-cyan: #2FF3E0;
+  --skilllink-gold: #F8D210;
+  --skilllink-pink: #FA26A0;
+  --skilllink-chili: #F51720;
+  --skilllink-light: #FFFFFF;
+  --skilllink-dark: #1A1A1A;
 }
 
-/* Override primary color to match SkillLink coral */
+/* Override primary color to match new color scheme */
 .bg-primary, .text-primary, .border-primary {
   --tw-bg-opacity: 1;
   --tw-text-opacity: 1;
   --tw-border-opacity: 1;
-  background-color: rgb(255 85 34 / var(--tw-bg-opacity));
-  color: rgb(255 85 34 / var(--tw-text-opacity));
-  border-color: rgb(255 85 34 / var(--tw-border-opacity));
+  background-color: rgb(245 23 32 / var(--tw-bg-opacity));
+  color: rgb(245 23 32 / var(--tw-text-opacity));
+  border-color: rgb(245 23 32 / var(--tw-border-opacity));
 }
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 85 34 / var(--tw-bg-opacity));
+  background-color: rgb(245 23 32 / var(--tw-bg-opacity));
 }
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(255 85 34 / var(--tw-text-opacity));
+  color: rgb(245 23 32 / var(--tw-text-opacity));
 }
 
 .border-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(255 85 34 / var(--tw-border-opacity));
+  border-color: rgb(245 23 32 / var(--tw-border-opacity));
 }
 
 /* Hover states */
 .hover\:bg-primary\/90:hover {
-  background-color: rgb(255 85 34 / 0.9);
+  background-color: rgb(245 23 32 / 0.9);
 }
 
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 85 34 / var(--tw-text-opacity));
+  color: rgb(245 23 32 / var(--tw-text-opacity));
 }
 
 .hover\:border-primary:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(255 85 34 / var(--tw-border-opacity));
+  border-color: rgb(245 23 32 / var(--tw-border-opacity));
 }
 
 /* Accent colors */
 .bg-primary\/10 {
-  background-color: rgb(255 85 34 / 0.1);
+  background-color: rgb(245 23 32 / 0.1);
+}
+
+/* New utility classes for our color scheme */
+.bg-cyan {
+  background-color: #2FF3E0;
+}
+.text-cyan {
+  color: #2FF3E0;
+}
+
+.bg-gold {
+  background-color: #F8D210;
+}
+.text-gold {
+  color: #F8D210;
+}
+
+.bg-pink {
+  background-color: #FA26A0;
+}
+.text-pink {
+  color: #FA26A0;
+}
+
+.bg-chili {
+  background-color: #F51720;
+}
+.text-chili {
+  color: #F51720;
+}
+
+/* Hover states for new colors */
+.hover\:bg-cyan:hover {
+  background-color: #2FF3E0;
+}
+.hover\:text-cyan:hover {
+  color: #2FF3E0;
+}
+
+.hover\:bg-gold:hover {
+  background-color: #F8D210;
+}
+.hover\:text-gold:hover {
+  color: #F8D210;
+}
+
+.hover\:bg-pink:hover {
+  background-color: #FA26A0;
+}
+.hover\:text-pink:hover {
+  color: #FA26A0;
+}
+
+.hover\:bg-chili:hover {
+  background-color: #F51720;
+}
+.hover\:text-chili:hover {
+  color: #F51720;
 }
 
 /* Font family adjustments */
