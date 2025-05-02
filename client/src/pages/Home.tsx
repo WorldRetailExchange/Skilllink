@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
   
   return (
-    <div className="antialiased text-gray-700 bg-white min-h-screen overflow-hidden">
+    <div className="antialiased text-gray-700 bg-light min-h-screen overflow-hidden">
       <Helmet>
         <title>SkillLink - Build Skills, Explore Passions & Connect with Mentors</title>
         <meta name="description" content="SkillLink is a playful world where students (ages 10-18) build skills, explore passions & connect with mentors through events, tutoring, and skill badges." />
@@ -37,70 +37,123 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </Helmet>
       
       <Header />
       <main>
         <Hero />
         
-        {/* Core Features with section divider handled internally */}
-        <CoreFeatures />
-        
-        {/* Section transitions between other components */}
+        {/* Core Features section with divider */}
         <div className="relative">
           <div className="absolute top-0 left-0 right-0">
-            <SectionDivider type="wave" position="top" className="text-gray-50" />
+            <SectionDivider 
+              type="clouds" 
+              position="top" 
+              className="text-light" 
+              height="md"
+            />
+          </div>
+          <CoreFeatures />
+        </div>
+        
+        {/* Features section with divider */}
+        <div className="relative">
+          <div className="absolute top-0 left-0 right-0">
+            <SectionDivider 
+              type="wave" 
+              position="top" 
+              className="text-white" 
+              height="md"
+            />
           </div>
           <Features />
         </div>
         
+        {/* How It Works section with divider */}
         <div className="relative">
           <div className="absolute top-0 left-0 right-0">
-            <SectionDivider type="angle" position="top" className="text-white" />
+            <SectionDivider 
+              type="bubbles" 
+              position="top" 
+              className="text-white" 
+              height="md"
+            />
           </div>
           <HowItWorks />
         </div>
         
+        {/* Testimonials section with divider */}
         <div className="relative">
           <div className="absolute top-0 left-0 right-0">
-            <SectionDivider type="curve" position="top" className="text-gray-50" />
+            <SectionDivider 
+              type="curve" 
+              position="top" 
+              className="text-white" 
+              height="md" 
+              fillClassName="fill-cyan/10"
+            />
           </div>
           <div data-aos="fade-up">
             <Testimonials />
           </div>
         </div>
         
+        {/* Environmental Initiative section with divider */}
         <div className="relative">
           <div className="absolute top-0 left-0 right-0">
-            <SectionDivider type="wave" position="top" className="text-white" />
+            <SectionDivider 
+              type="wave" 
+              position="top" 
+              className="text-white" 
+              height="md"
+              fillClassName="fill-gold/10"
+            />
           </div>
           <div data-aos="fade-up">
             <EnvironmentalInitiative />
           </div>
         </div>
         
+        {/* Target Audience section with divider */}
         <div className="relative">
           <div className="absolute top-0 left-0 right-0">
-            <SectionDivider type="angle" position="top" className="text-gray-50" />
+            <SectionDivider 
+              type="clouds" 
+              position="top" 
+              className="text-light" 
+              height="md"
+            />
           </div>
           <div data-aos="fade-up">
             <TargetAudience />
           </div>
         </div>
         
+        {/* Call to Action section with divider */}
         <div className="relative">
           <div className="absolute top-0 left-0 right-0">
-            <SectionDivider type="curve" position="top" className="text-white" />
+            <SectionDivider 
+              type="curve" 
+              position="top" 
+              className="text-white" 
+              height="md"
+              fillClassName="fill-pink/10"
+            />
           </div>
           <div data-aos="zoom-in">
             <CallToAction />
           </div>
         </div>
         
+        {/* Contact section with divider */}
         <div className="relative">
           <div className="absolute top-0 left-0 right-0">
-            <SectionDivider type="wave" position="top" className="text-gray-50" />
+            <SectionDivider 
+              type="wave" 
+              position="top" 
+              className="text-white" 
+              height="sm"
+            />
           </div>
           <Contact />
         </div>
