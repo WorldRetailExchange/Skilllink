@@ -35,7 +35,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              The all-in-one platform that helps students ages 10-18 find activities, tutors, and build their personal learning portfolios.
+              The all-in-one platform that helps students find activities, tutors, and build their personal learning portfolios.
             </motion.p>
             
             <motion.div 

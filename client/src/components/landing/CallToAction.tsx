@@ -55,7 +55,7 @@ const CallToAction = () => {
                 </Button>
               </a>
               <a href="#contact">
-                <Button size="lg" variant="outline" className="border-2 border-white hover:bg-white/10 text-white px-8 rounded-full w-full md:w-auto font-bold hover:border-yellow transition-all duration-300 shadow-md">
+              <Button size="lg" className="bg-yellow hover:bg-yellow/90 px-8 rounded-full w-full md:w-auto font-bold text-navy shadow-md transition-all duration-300">
                   Partner With Us
                 </Button>
               </a>
