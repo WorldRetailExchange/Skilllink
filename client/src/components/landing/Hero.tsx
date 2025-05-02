@@ -4,36 +4,103 @@ import { fadeIn, slideIn } from "@/lib/motion";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-white via-[#e9f8ff] to-[#fff9e6] py-20 overflow-hidden">
+    <section className="bg-light py-20 overflow-hidden relative">
+      {/* Subtle background pattern for visual interest */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyRkYzRTAiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMiAyaDR2MWgtNHYtMXptLTggMGgxdjRoLTF2LTR6TTQyIDEyaDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMiAyaDR2MWgtNHYtMXptLTggMGgxdjRoLTF2LTR6bS0xOCAwaDF2NGgtMXYtNHptMiAyaDR2MWgtNHYtMXptLTggMGgxdjRoLTF2LTR6TTMyIDEyaDF2NGgtMXYtNHptMTYgMTZoMXY0aC0xdi00em0tOCAwaDR2MWgtNHYtMXptMiAyaDR2MWgtNHYtMXptLTggMGgxdjRoLTF2LTR6bS0xOC0yaDF2NGgtMXYtNHptMiAyaDR2MWgtNHYtMXptLTggMGgxdjRoLTF2LTR6TTM0IDM2aDR2MWgtNHYtMXptMCAxOGgxdjRoLTF2LTR6bS0xOCAwaDF2NGgtMXYtNHptMCAyaDR2MWgtNHYtMXpt0/"></div>
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center md:flex-wrap-reverse">
+        <div className="flex flex-col md:flex-row-reverse items-center">
+          {/* Image Column */}
           <motion.div 
-            className="md:w-1/2 mb-10 md:mb-0 relative z-10"
+            className="md:w-1/2 relative mb-10 md:mb-0 z-10"
+            variants={slideIn("left", "tween", 0.2, 1)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            variants={fadeIn("right", "tween", 0.2, 1)}
           >
-            {/* Decorative elements */}
-            <motion.div 
-              className="absolute -top-10 -left-20 w-40 h-40 bg-pink/10 rounded-full blur-3xl" 
-              animate={{ 
-                scale: [1, 1.2, 1], 
-                opacity: [0.3, 0.2, 0.3] 
-              }}
-              transition={{ 
-                duration: 6, 
-                repeat: Infinity 
-              }}
-            />
-
+            <div className="relative">
+              {/* Decorative elements */}
+              <motion.div 
+                className="absolute -top-10 -right-10 w-40 h-40 bg-cyan/10 rounded-full blur-xl" 
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.2, 0.3, 0.2] 
+                }}
+                transition={{ 
+                  duration: 6, 
+                  repeat: Infinity 
+                }}
+              />
+              
+              <motion.div 
+                className="absolute -bottom-8 -left-8 w-40 h-40 bg-gold/10 rounded-full blur-xl" 
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.2, 0.3, 0.2] 
+                }}
+                transition={{ 
+                  duration: 8, 
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+              />
+              
+              {/* Main image with enhanced styling */}
+              <motion.div 
+                className="relative z-10 rounded-2xl overflow-hidden shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan/30 to-pink/30 mix-blend-overlay z-10"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&auto=format&fit=crop&q=90" 
+                  alt="Students collaborating on a project" 
+                  className="w-full h-auto object-cover shadow-md" 
+                  loading="eager"
+                />
+              </motion.div>
+              
+              {/* Decorative dots */}
+              <div className="mt-4 flex justify-center space-x-2">
+                <motion.div 
+                  className="h-2 w-2 bg-cyan rounded-full"
+                  animate={{ scale: [1, 1.5, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <motion.div 
+                  className="h-2 w-2 bg-gold rounded-full"
+                  animate={{ scale: [1, 1.5, 1] }}
+                  transition={{ duration: 2, delay: 0.3, repeat: Infinity }}
+                />
+                <motion.div 
+                  className="h-2 w-2 bg-pink rounded-full"
+                  animate={{ scale: [1, 1.5, 1] }}
+                  transition={{ duration: 2, delay: 0.6, repeat: Infinity }}
+                />
+                <motion.div 
+                  className="h-2 w-2 bg-cyan rounded-full"
+                  animate={{ scale: [1, 1.5, 1] }}
+                  transition={{ duration: 2, delay: 0.9, repeat: Infinity }}
+                />
+              </div>
+            </div>
+          </motion.div>
+          
+          {/* Content Column */}
+          <motion.div 
+            className="md:w-1/2 md:pr-12"
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+          >
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6"
+              className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              A playful world where students <span className="text-chili font-extrabold">build skills</span>, <span className="text-gold font-extrabold">explore passions</span> & <span className="text-pink font-extrabold">connect with mentors</span>
+              A playful world where students <span className="text-pink font-extrabold">build skills</span>, <span className="text-gold font-extrabold">explore passions</span> & <span className="text-cyan font-extrabold">connect with mentors</span>
             </motion.h1>
             
             <motion.p 
@@ -46,156 +113,88 @@ const Hero = () => {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
               <a href="#join-beta" id="join-beta">
-                <Button size="lg" className="bg-gradient-to-r from-chili to-pink text-white font-semibold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
+                <Button size="lg" className="bg-cyan hover:bg-cyan/90 text-navy font-semibold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
                   Join the Beta
                 </Button>
               </a>
               <a href="#features">
-                <Button size="lg" variant="outline" className="bg-white/90 backdrop-blur-sm border-2 border-gray-300 hover:border-cyan hover:bg-white text-gray-700 px-8 py-6 rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+                <Button size="lg" variant="outline" className="bg-white border-2 border-gold hover:border-pink hover:bg-white/90 text-navy px-8 py-6 rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
                   Learn More
                 </Button>
               </a>
             </motion.div>
             
-            <div className="mt-12 grid grid-cols-2 gap-5">
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <motion.div 
-                className="bg-white/80 backdrop-blur-md p-5 rounded-xl shadow-md hover:shadow-lg transition-all hover:bg-gradient-to-br hover:from-white hover:to-pink/5 group"
+                className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-cyan group"
                 variants={fadeIn("up", "tween", 0.4, 0.8)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
+                whileHover={{ y: -5 }}
               >
                 <div className="flex items-center">
-                  <div className="mr-3 text-3xl group-hover:scale-110 transition-transform">🏆</div>
-                  <h3 className="font-medium text-gray-800">Build your learning identity</h3>
+                  <div className="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-xl group-hover:scale-110 transition-transform">🏆</span>
+                  </div>
+                  <h3 className="font-medium text-navy">Build your learning identity</h3>
                 </div>
               </motion.div>
               
               <motion.div 
-                className="bg-white/80 backdrop-blur-md p-5 rounded-xl shadow-md hover:shadow-lg transition-all hover:bg-gradient-to-br hover:from-white hover:to-gold/5 group"
+                className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-gold group"
                 variants={fadeIn("up", "tween", 0.5, 0.8)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
+                whileHover={{ y: -5 }}
               >
                 <div className="flex items-center">
-                  <div className="mr-3 text-3xl group-hover:scale-110 transition-transform">🔍</div>
-                  <h3 className="font-medium text-gray-800">Discover activities around you</h3>
+                  <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-xl group-hover:scale-110 transition-transform">🔍</span>
+                  </div>
+                  <h3 className="font-medium text-navy">Discover nearby activities</h3>
                 </div>
               </motion.div>
               
               <motion.div 
-                className="bg-white/80 backdrop-blur-md p-5 rounded-xl shadow-md hover:shadow-lg transition-all hover:bg-gradient-to-br hover:from-white hover:to-cyan/5 group"
+                className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-pink group"
                 variants={fadeIn("up", "tween", 0.6, 0.8)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
+                whileHover={{ y: -5 }}
               >
                 <div className="flex items-center">
-                  <div className="mr-3 text-3xl group-hover:scale-110 transition-transform">🎯</div>
-                  <h3 className="font-medium text-gray-800">Celebrate effort with SkillPoints</h3>
+                  <div className="w-10 h-10 bg-pink/10 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-xl group-hover:scale-110 transition-transform">🎯</span>
+                  </div>
+                  <h3 className="font-medium text-navy">Earn SkillPoints & badges</h3>
                 </div>
               </motion.div>
               
               <motion.div 
-                className="bg-white/80 backdrop-blur-md p-5 rounded-xl shadow-md hover:shadow-lg transition-all hover:bg-gradient-to-br hover:from-white hover:to-chili/5 group"
+                className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-cyan group"
                 variants={fadeIn("up", "tween", 0.7, 0.8)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
+                whileHover={{ y: -5 }}
               >
                 <div className="flex items-center">
-                  <div className="mr-3 text-3xl group-hover:scale-110 transition-transform">🤝</div>
-                  <h3 className="font-medium text-gray-800">Trusted by tutors, parents & schools</h3>
+                  <div className="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-xl group-hover:scale-110 transition-transform">🤝</span>
+                  </div>
+                  <h3 className="font-medium text-navy">Connect with mentors</h3>
                 </div>
               </motion.div>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="md:w-1/2 md:pl-8 relative z-0"
-            variants={slideIn("left", "tween", 0.2, 1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
-          >
-            {/* Decorative circles */}
-            <motion.div 
-              className="absolute top-1/4 -right-16 w-32 h-32 bg-gold/40 rounded-full blur-3xl" 
-              animate={{ 
-                scale: [1, 1.3, 1], 
-                opacity: [0.3, 0.2, 0.3] 
-              }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity,
-                repeatType: "reverse" 
-              }}
-            />
-            
-            <motion.div 
-              className="absolute -bottom-20 left-1/3 w-40 h-40 bg-cyan/30 rounded-full blur-3xl" 
-              animate={{ 
-                scale: [1, 1.4, 1], 
-                opacity: [0.2, 0.3, 0.2] 
-              }}
-              transition={{ 
-                duration: 7, 
-                repeat: Infinity,
-                repeatType: "reverse" 
-              }}
-            />
-            
-            <div className="relative">
-              <div className="absolute -top-5 -left-5 w-20 h-20 bg-gold rounded-full opacity-30 animate-pulse z-0"></div>
-              <div className="absolute -bottom-5 -right-5 w-20 h-20 bg-cyan rounded-full opacity-30 animate-pulse z-0"></div>
-              
-              <motion.div 
-                className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
-                animate={{ 
-                  boxShadow: [
-                    "0 10px 50px rgba(250, 38, 160, 0.1)", 
-                    "0 10px 50px rgba(248, 210, 16, 0.2)", 
-                    "0 10px 50px rgba(47, 243, 224, 0.1)"
-                  ]
-                }}
-                transition={{ 
-                  duration: 10, 
-                  repeat: Infinity,
-                  repeatType: "reverse" 
-                }}
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1000&auto=format&fit=crop&q=90" 
-                  alt="Students collaborating on a project" 
-                  className="w-full h-auto object-cover" 
-                  loading="eager"
-                />
-              </motion.div>
-            </div>
-            
-            <div className="mt-6 grid grid-cols-3 gap-4">
-              <motion.div 
-                className="bg-gold h-3 rounded-full"
-                animate={{ opacity: [0.4, 1, 0.4] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-              <motion.div 
-                className="bg-pink h-3 rounded-full"
-                animate={{ opacity: [0.4, 1, 0.4] }}
-                transition={{ duration: 2, delay: 0.6, repeat: Infinity }}
-              />
-              <motion.div 
-                className="bg-cyan h-3 rounded-full"
-                animate={{ opacity: [0.4, 1, 0.4] }}
-                transition={{ duration: 2, delay: 1.2, repeat: Infinity }}
-              />
             </div>
           </motion.div>
         </div>

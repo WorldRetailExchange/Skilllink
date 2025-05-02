@@ -11,11 +11,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        // SkillLink Brand Colors
-        cyan: "#2FF3E0",
-        gold: "#F8D210",
-        pink: "#FA26A0",
-        chili: "#F51720",
+        // SkillLink Brand Colors - Simplified as requested
+        cyan: "#2FF3E0",    // Primary 1
+        gold: "#F8D210",    // Primary 2
+        pink: "#FA26A0",    // Accent 2 
+        navy: "#1A1A1A",    // Accent 1
+        light: "#FFFDF7",   // Background light
         
         // Shadcn Colors
         background: "hsl(var(--background))",

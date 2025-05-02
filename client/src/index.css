@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 :root {
-  /* SkillLink Brand Colors */
-  --skilllink-cyan: #2FF3E0;
-  --skilllink-gold: #F8D210;
-  --skilllink-pink: #FA26A0;
-  --skilllink-chili: #F51720;
-  --skilllink-light: #FFFFFF;
-  --skilllink-dark: #1A1A1A;
+  /* SkillLink Brand Colors - Simplified as requested */
+  /* Primary Colors */
+  --skilllink-cyan: #2FF3E0;    /* Primary 1: For CTAs, highlights */
+  --skilllink-gold: #F8D210;    /* Primary 2: For badges, icons, hover */
+  /* Accent Colors */
+  --skilllink-pink: #FA26A0;    /* Accent 2: For button accents, section transitions */
+  --skilllink-navy: #1A1A1A;    /* Accent 1: For text headings */
+  /* Background Colors */
+  --skilllink-light: #FFFDF7;   /* Soft off-white for backgrounds */
+  --skilllink-gradient-bg: linear-gradient(to bottom, #fef7e0, #fff2ec); /* Gradient background */
 
   /* Shadcn Theme Colors */
   --background: 0 0% 100%;
@@ -196,35 +199,45 @@
   background-color: rgba(250, 38, 160, 0.5);
 }
 
-.bg-chili {
-  background-color: var(--skilllink-chili);
+.bg-navy {
+  background-color: var(--skilllink-navy);
 }
-.text-chili {
-  color: var(--skilllink-chili);
+.text-navy {
+  color: var(--skilllink-navy);
 }
-.border-chili {
-  border-color: var(--skilllink-chili);
+.border-navy {
+  border-color: var(--skilllink-navy);
 }
-.bg-chili\/5 {
-  background-color: rgba(245, 23, 32, 0.05);
+.bg-navy\/5 {
+  background-color: rgba(26, 26, 26, 0.05);
 }
-.bg-chili\/10 {
-  background-color: rgba(245, 23, 32, 0.1);
+.bg-navy\/10 {
+  background-color: rgba(26, 26, 26, 0.1);
 }
-.bg-chili\/15 {
-  background-color: rgba(245, 23, 32, 0.15);
+.bg-navy\/15 {
+  background-color: rgba(26, 26, 26, 0.15);
 }
-.bg-chili\/20 {
-  background-color: rgba(245, 23, 32, 0.2);
+.bg-navy\/20 {
+  background-color: rgba(26, 26, 26, 0.2);
 }
-.bg-chili\/30 {
-  background-color: rgba(245, 23, 32, 0.3);
+.bg-navy\/30 {
+  background-color: rgba(26, 26, 26, 0.3);
 }
-.bg-chili\/40 {
-  background-color: rgba(245, 23, 32, 0.4);
+.bg-navy\/40 {
+  background-color: rgba(26, 26, 26, 0.4);
 }
-.bg-chili\/50 {
-  background-color: rgba(245, 23, 32, 0.5);
+.bg-navy\/50 {
+  background-color: rgba(26, 26, 26, 0.5);
+}
+
+.bg-light {
+  background-color: var(--skilllink-light);
+}
+.text-light {
+  color: var(--skilllink-light);
+}
+.border-light {
+  border-color: var(--skilllink-light);
 }
 
 /* Hover states for brand colors */
@@ -258,14 +271,24 @@
   border-color: var(--skilllink-pink);
 }
 
-.hover\:bg-chili:hover {
-  background-color: var(--skilllink-chili);
+.hover\:bg-navy:hover {
+  background-color: var(--skilllink-navy);
 }
-.hover\:text-chili:hover {
-  color: var(--skilllink-chili);
+.hover\:text-navy:hover {
+  color: var(--skilllink-navy);
 }
-.hover\:border-chili:hover {
-  border-color: var(--skilllink-chili);
+.hover\:border-navy:hover {
+  border-color: var(--skilllink-navy);
+}
+
+.hover\:bg-light:hover {
+  background-color: var(--skilllink-light);
+}
+.hover\:text-light:hover {
+  color: var(--skilllink-light);
+}
+.hover\:border-light:hover {
+  border-color: var(--skilllink-light);
 }
 
 /* Font family adjustments */

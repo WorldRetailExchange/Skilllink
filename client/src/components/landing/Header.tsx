@@ -29,51 +29,59 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
+          {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="h-10 w-10 bg-gradient-to-r from-pink to-cyan text-white flex items-center justify-center rounded-full shadow-sm">
+            <div className="h-10 w-10 bg-gradient-to-r from-cyan to-gold text-white flex items-center justify-center rounded-full shadow-md">
               <span className="text-xl">🎓</span>
             </div>
-            <span className="text-2xl font-bold text-gray-800">SkillLink</span>
+            <span className="text-2xl font-bold text-navy">SkillLink</span>
           </div>
 
-          <nav className="hidden md:flex items-center justify-center space-x-10">
-            <a href="#features" className="text-base font-medium text-gray-600 hover:text-chili transition-all duration-300 relative group">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center justify-center space-x-8">
+            <a href="#features" className="text-base font-medium text-navy hover:text-cyan transition-all duration-300 relative group">
               Features
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-chili group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#portfolio" className="text-base font-medium text-gray-600 hover:text-gold transition-all duration-300 relative group">
+            <a href="#portfolio" className="text-base font-medium text-navy hover:text-gold transition-all duration-300 relative group">
               Student Portfolio
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#events" className="text-base font-medium text-gray-600 hover:text-pink transition-all duration-300 relative group">
+            <a href="#events" className="text-base font-medium text-navy hover:text-pink transition-all duration-300 relative group">
               Events
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#tutors" className="text-base font-medium text-gray-600 hover:text-cyan transition-all duration-300 relative group">
+            <a href="#tutors" className="text-base font-medium text-navy hover:text-cyan transition-all duration-300 relative group">
               Find Tutors
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan group-hover:w-full transition-all duration-300"></span>
             </a>
           </nav>
 
+          {/* Desktop CTA Button */}
           <div className="hidden md:block">
             <a href="#join-beta">
-              <Button className="bg-gradient-to-r from-chili to-pink text-white font-semibold rounded-full px-6 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+              <Button className="bg-cyan hover:bg-cyan/90 text-navy font-semibold rounded-full px-6 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                 Join the Beta
               </Button>
             </a>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors"
+            className="md:hidden focus:outline-none p-2 rounded-full hover:bg-gray-100 transition-colors"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} className="text-chili" /> : <Menu size={24} />}
+            {isMobileMenuOpen ? (
+              <X size={24} className="text-pink" />
+            ) : (
+              <Menu size={24} className="text-navy" />
+            )}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -83,42 +91,50 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white/98 backdrop-blur-md border-b border-gray-200 shadow-lg overflow-hidden"
           >
-            <div className="px-6 py-6 space-y-5">
+            <div className="px-6 py-6 space-y-4">
               <a
                 href="#features"
-                className="flex items-center text-gray-600 hover:text-chili py-2 transform hover:translate-x-2 transition-all duration-300"
+                className="flex items-center text-navy hover:text-cyan py-3 transform hover:translate-x-2 transition-all duration-300"
                 onClick={toggleMobileMenu}
               >
-                <span className="mr-2">✨</span>
-                Features
+                <div className="w-8 h-8 bg-cyan/10 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-lg">✨</span>
+                </div>
+                <span className="font-medium">Features</span>
               </a>
               <a
                 href="#portfolio"
-                className="flex items-center text-gray-600 hover:text-gold py-2 transform hover:translate-x-2 transition-all duration-300"
+                className="flex items-center text-navy hover:text-gold py-3 transform hover:translate-x-2 transition-all duration-300"
                 onClick={toggleMobileMenu}
               >
-                <span className="mr-2">🎓</span>
-                Student Portfolio
+                <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-lg">🎓</span>
+                </div>
+                <span className="font-medium">Student Portfolio</span>
               </a>
               <a
                 href="#events"
-                className="flex items-center text-gray-600 hover:text-pink py-2 transform hover:translate-x-2 transition-all duration-300"
+                className="flex items-center text-navy hover:text-pink py-3 transform hover:translate-x-2 transition-all duration-300"
                 onClick={toggleMobileMenu}
               >
-                <span className="mr-2">🎫</span>
-                Events
+                <div className="w-8 h-8 bg-pink/10 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-lg">🎟️</span>
+                </div>
+                <span className="font-medium">Events</span>
               </a>
               <a
                 href="#tutors"
-                className="flex items-center text-gray-600 hover:text-cyan py-2 transform hover:translate-x-2 transition-all duration-300"
+                className="flex items-center text-navy hover:text-cyan py-3 transform hover:translate-x-2 transition-all duration-300"
                 onClick={toggleMobileMenu}
               >
-                <span className="mr-2">👨‍🏫</span>
-                Find Tutors
+                <div className="w-8 h-8 bg-cyan/10 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-lg">👨‍🏫</span>
+                </div>
+                <span className="font-medium">Find Tutors</span>
               </a>
-              <div className="pt-2">
+              <div className="pt-4 mt-2">
                 <a href="#join-beta" onClick={toggleMobileMenu}>
-                  <Button className="w-full bg-gradient-to-r from-chili to-pink text-white font-semibold rounded-full py-6 shadow-md">
+                  <Button className="w-full bg-cyan text-navy font-semibold rounded-full py-5 shadow-md">
                     Join the Beta
                   </Button>
                 </a>
