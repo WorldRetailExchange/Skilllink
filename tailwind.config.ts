@@ -11,6 +11,13 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        // SkillLink Brand Colors
+        cyan: "#2FF3E0",
+        gold: "#F8D210",
+        pink: "#FA26A0",
+        chili: "#F51720",
+        
+        // Shadcn Colors
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -62,28 +69,43 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Fredoka', 'Poppins', 'system-ui', 'sans-serif'],
+      },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "0.6" },
+        },
+        "gradient": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "gradient": "gradient 8s ease infinite",
       },
+      boxShadow: {
+        'skilllink': '0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 2px 10px -3px rgba(0, 0, 0, 0.05)',
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
