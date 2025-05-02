@@ -3,16 +3,21 @@
 @tailwind utilities;
 
 :root {
-  /* SkillLink Brand Colors - Simplified as requested */
+  /* SkillLink Brand Colors - Updated per specifications */
   /* Primary Colors */
-  --skilllink-cyan: #2FF3E0;    /* Primary 1: For CTAs, highlights */
-  --skilllink-gold: #F8D210;    /* Primary 2: For badges, icons, hover */
+  --skilllink-blue: #4CB3F8;    /* Primary 1: Sky Blue - Friendly, calming base */
+  --skilllink-yellow: #F7C948;  /* Primary 2: Warm Mustard Yellow - For CTAs, icons, badges */
   /* Accent Colors */
-  --skilllink-pink: #FA26A0;    /* Accent 2: For button accents, section transitions */
-  --skilllink-navy: #1A1A1A;    /* Accent 1: For text headings */
+  --skilllink-pink: #F88F8F;    /* Accent 2: Soft Coral Pink - For callouts, fun icons, gradients */
+  --skilllink-navy: #1E1E3F;    /* Accent 1: Deep Indigo/Navy - For headlines, nav, footer */
   /* Background Colors */
-  --skilllink-light: #FFFDF7;   /* Soft off-white for backgrounds */
-  --skilllink-gradient-bg: linear-gradient(to bottom, #fef7e0, #fff2ec); /* Gradient background */
+  --skilllink-light: #FFFDF6;   /* Eggshell Off-White - Clean, warm base for readability */
+  /* Supporting Colors */
+  --skilllink-mint: #CFF4D2;    /* Mint Green - For section dividers, badges */
+  --skilllink-lavender: #E6E6FA; /* Cool Lavender - For testimonial card backgrounds */
+  --skilllink-gray: #F0F0F0;    /* Light Gray - For input fields, borders, shadows */
+  /* Gradient backgrounds */
+  --skilllink-gradient-bg: linear-gradient(to bottom, #FFFDF6, #F0F0F0); /* Eggshell to Light Gray */
 
   /* Shadcn Theme Colors */
   --background: 0 0% 100%;
@@ -106,68 +111,71 @@
 }
 
 /* Utility classes for SkillLink brand colors */
-.bg-cyan {
-  background-color: var(--skilllink-cyan);
+/* Primary 1: Sky Blue */
+.bg-blue {
+  background-color: var(--skilllink-blue);
 }
-.text-cyan {
-  color: var(--skilllink-cyan);
+.text-blue {
+  color: var(--skilllink-blue);
 }
-.border-cyan {
-  border-color: var(--skilllink-cyan);
+.border-blue {
+  border-color: var(--skilllink-blue);
 }
-.bg-cyan\/5 {
-  background-color: rgba(47, 243, 224, 0.05);
+.bg-blue\/5 {
+  background-color: rgba(76, 179, 248, 0.05);
 }
-.bg-cyan\/10 {
-  background-color: rgba(47, 243, 224, 0.1);
+.bg-blue\/10 {
+  background-color: rgba(76, 179, 248, 0.1);
 }
-.bg-cyan\/15 {
-  background-color: rgba(47, 243, 224, 0.15);
+.bg-blue\/15 {
+  background-color: rgba(76, 179, 248, 0.15);
 }
-.bg-cyan\/20 {
-  background-color: rgba(47, 243, 224, 0.2);
+.bg-blue\/20 {
+  background-color: rgba(76, 179, 248, 0.2);
 }
-.bg-cyan\/30 {
-  background-color: rgba(47, 243, 224, 0.3);
+.bg-blue\/30 {
+  background-color: rgba(76, 179, 248, 0.3);
 }
-.bg-cyan\/40 {
-  background-color: rgba(47, 243, 224, 0.4);
+.bg-blue\/40 {
+  background-color: rgba(76, 179, 248, 0.4);
 }
-.bg-cyan\/50 {
-  background-color: rgba(47, 243, 224, 0.5);
-}
-
-.bg-gold {
-  background-color: var(--skilllink-gold);
-}
-.text-gold {
-  color: var(--skilllink-gold);
-}
-.border-gold {
-  border-color: var(--skilllink-gold);
-}
-.bg-gold\/5 {
-  background-color: rgba(248, 210, 16, 0.05);
-}
-.bg-gold\/10 {
-  background-color: rgba(248, 210, 16, 0.1);
-}
-.bg-gold\/15 {
-  background-color: rgba(248, 210, 16, 0.15);
-}
-.bg-gold\/20 {
-  background-color: rgba(248, 210, 16, 0.2);
-}
-.bg-gold\/30 {
-  background-color: rgba(248, 210, 16, 0.3);
-}
-.bg-gold\/40 {
-  background-color: rgba(248, 210, 16, 0.4);
-}
-.bg-gold\/50 {
-  background-color: rgba(248, 210, 16, 0.5);
+.bg-blue\/50 {
+  background-color: rgba(76, 179, 248, 0.5);
 }
 
+/* Primary 2: Warm Mustard Yellow */
+.bg-yellow {
+  background-color: var(--skilllink-yellow);
+}
+.text-yellow {
+  color: var(--skilllink-yellow);
+}
+.border-yellow {
+  border-color: var(--skilllink-yellow);
+}
+.bg-yellow\/5 {
+  background-color: rgba(247, 201, 72, 0.05);
+}
+.bg-yellow\/10 {
+  background-color: rgba(247, 201, 72, 0.1);
+}
+.bg-yellow\/15 {
+  background-color: rgba(247, 201, 72, 0.15);
+}
+.bg-yellow\/20 {
+  background-color: rgba(247, 201, 72, 0.2);
+}
+.bg-yellow\/30 {
+  background-color: rgba(247, 201, 72, 0.3);
+}
+.bg-yellow\/40 {
+  background-color: rgba(247, 201, 72, 0.4);
+}
+.bg-yellow\/50 {
+  background-color: rgba(247, 201, 72, 0.5);
+}
+
+/* Accent 2: Soft Coral Pink */
 .bg-pink {
   background-color: var(--skilllink-pink);
 }
@@ -178,27 +186,28 @@
   border-color: var(--skilllink-pink);
 }
 .bg-pink\/5 {
-  background-color: rgba(250, 38, 160, 0.05);
+  background-color: rgba(248, 143, 143, 0.05);
 }
 .bg-pink\/10 {
-  background-color: rgba(250, 38, 160, 0.1);
+  background-color: rgba(248, 143, 143, 0.1);
 }
 .bg-pink\/15 {
-  background-color: rgba(250, 38, 160, 0.15);
+  background-color: rgba(248, 143, 143, 0.15);
 }
 .bg-pink\/20 {
-  background-color: rgba(250, 38, 160, 0.2);
+  background-color: rgba(248, 143, 143, 0.2);
 }
 .bg-pink\/30 {
-  background-color: rgba(250, 38, 160, 0.3);
+  background-color: rgba(248, 143, 143, 0.3);
 }
 .bg-pink\/40 {
-  background-color: rgba(250, 38, 160, 0.4);
+  background-color: rgba(248, 143, 143, 0.4);
 }
 .bg-pink\/50 {
-  background-color: rgba(250, 38, 160, 0.5);
+  background-color: rgba(248, 143, 143, 0.5);
 }
 
+/* Accent 1: Deep Indigo/Navy */
 .bg-navy {
   background-color: var(--skilllink-navy);
 }
@@ -209,27 +218,28 @@
   border-color: var(--skilllink-navy);
 }
 .bg-navy\/5 {
-  background-color: rgba(26, 26, 26, 0.05);
+  background-color: rgba(30, 30, 63, 0.05);
 }
 .bg-navy\/10 {
-  background-color: rgba(26, 26, 26, 0.1);
+  background-color: rgba(30, 30, 63, 0.1);
 }
 .bg-navy\/15 {
-  background-color: rgba(26, 26, 26, 0.15);
+  background-color: rgba(30, 30, 63, 0.15);
 }
 .bg-navy\/20 {
-  background-color: rgba(26, 26, 26, 0.2);
+  background-color: rgba(30, 30, 63, 0.2);
 }
 .bg-navy\/30 {
-  background-color: rgba(26, 26, 26, 0.3);
+  background-color: rgba(30, 30, 63, 0.3);
 }
 .bg-navy\/40 {
-  background-color: rgba(26, 26, 26, 0.4);
+  background-color: rgba(30, 30, 63, 0.4);
 }
 .bg-navy\/50 {
-  background-color: rgba(26, 26, 26, 0.5);
+  background-color: rgba(30, 30, 63, 0.5);
 }
 
+/* Background: Eggshell Off-White */
 .bg-light {
   background-color: var(--skilllink-light);
 }
@@ -240,27 +250,91 @@
   border-color: var(--skilllink-light);
 }
 
+/* Supporting Colors */
+.bg-mint {
+  background-color: var(--skilllink-mint);
+}
+.text-mint {
+  color: var(--skilllink-mint);
+}
+.border-mint {
+  border-color: var(--skilllink-mint);
+}
+.bg-mint\/10 {
+  background-color: rgba(207, 244, 210, 0.1);
+}
+.bg-mint\/20 {
+  background-color: rgba(207, 244, 210, 0.2);
+}
+.bg-mint\/30 {
+  background-color: rgba(207, 244, 210, 0.3);
+}
+
+.bg-lavender {
+  background-color: var(--skilllink-lavender);
+}
+.text-lavender {
+  color: var(--skilllink-lavender);
+}
+.border-lavender {
+  border-color: var(--skilllink-lavender);
+}
+.bg-lavender\/10 {
+  background-color: rgba(230, 230, 250, 0.1);
+}
+.bg-lavender\/20 {
+  background-color: rgba(230, 230, 250, 0.2);
+}
+.bg-lavender\/30 {
+  background-color: rgba(230, 230, 250, 0.3);
+}
+
+.bg-gray {
+  background-color: var(--skilllink-gray);
+}
+.text-gray {
+  color: var(--skilllink-gray);
+}
+.border-gray {
+  border-color: var(--skilllink-gray);
+}
+
 /* Hover states for brand colors */
-.hover\:bg-cyan:hover {
-  background-color: var(--skilllink-cyan);
+/* Primary 1: Sky Blue */
+.hover\:bg-blue:hover {
+  background-color: var(--skilllink-blue);
 }
-.hover\:text-cyan:hover {
-  color: var(--skilllink-cyan);
+.hover\:text-blue:hover {
+  color: var(--skilllink-blue);
 }
-.hover\:border-cyan:hover {
-  border-color: var(--skilllink-cyan);
+.hover\:border-blue:hover {
+  border-color: var(--skilllink-blue);
 }
-
-.hover\:bg-gold:hover {
-  background-color: var(--skilllink-gold);
+.hover\:bg-blue\/90:hover {
+  background-color: rgba(76, 179, 248, 0.9);
 }
-.hover\:text-gold:hover {
-  color: var(--skilllink-gold);
-}
-.hover\:border-gold:hover {
-  border-color: var(--skilllink-gold);
+.hover\:bg-blue\/80:hover {
+  background-color: rgba(76, 179, 248, 0.8);
 }
 
+/* Primary 2: Warm Mustard Yellow */
+.hover\:bg-yellow:hover {
+  background-color: var(--skilllink-yellow);
+}
+.hover\:text-yellow:hover {
+  color: var(--skilllink-yellow);
+}
+.hover\:border-yellow:hover {
+  border-color: var(--skilllink-yellow);
+}
+.hover\:bg-yellow\/90:hover {
+  background-color: rgba(247, 201, 72, 0.9);
+}
+.hover\:bg-yellow\/80:hover {
+  background-color: rgba(247, 201, 72, 0.8);
+}
+
+/* Accent 2: Soft Coral Pink */
 .hover\:bg-pink:hover {
   background-color: var(--skilllink-pink);
 }
@@ -270,7 +344,14 @@
 .hover\:border-pink:hover {
   border-color: var(--skilllink-pink);
 }
+.hover\:bg-pink\/90:hover {
+  background-color: rgba(248, 143, 143, 0.9);
+}
+.hover\:bg-pink\/80:hover {
+  background-color: rgba(248, 143, 143, 0.8);
+}
 
+/* Accent 1: Deep Indigo/Navy */
 .hover\:bg-navy:hover {
   background-color: var(--skilllink-navy);
 }
@@ -280,7 +361,14 @@
 .hover\:border-navy:hover {
   border-color: var(--skilllink-navy);
 }
+.hover\:bg-navy\/90:hover {
+  background-color: rgba(30, 30, 63, 0.9);
+}
+.hover\:bg-navy\/80:hover {
+  background-color: rgba(30, 30, 63, 0.8);
+}
 
+/* Background: Eggshell Off-White */
 .hover\:bg-light:hover {
   background-color: var(--skilllink-light);
 }
@@ -289,6 +377,37 @@
 }
 .hover\:border-light:hover {
   border-color: var(--skilllink-light);
+}
+
+/* Supporting Colors */
+.hover\:bg-mint:hover {
+  background-color: var(--skilllink-mint);
+}
+.hover\:text-mint:hover {
+  color: var(--skilllink-mint);
+}
+.hover\:border-mint:hover {
+  border-color: var(--skilllink-mint);
+}
+
+.hover\:bg-lavender:hover {
+  background-color: var(--skilllink-lavender);
+}
+.hover\:text-lavender:hover {
+  color: var(--skilllink-lavender);
+}
+.hover\:border-lavender:hover {
+  border-color: var(--skilllink-lavender);
+}
+
+.hover\:bg-gray:hover {
+  background-color: var(--skilllink-gray);
+}
+.hover\:text-gray:hover {
+  color: var(--skilllink-gray);
+}
+.hover\:border-gray:hover {
+  border-color: var(--skilllink-gray);
 }
 
 /* Font family adjustments */

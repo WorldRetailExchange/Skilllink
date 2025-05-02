@@ -11,12 +11,15 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        // SkillLink Brand Colors - Simplified as requested
-        cyan: "#2FF3E0",    // Primary 1
-        gold: "#F8D210",    // Primary 2
-        pink: "#FA26A0",    // Accent 2 
-        navy: "#1A1A1A",    // Accent 1
-        light: "#FFFDF7",   // Background light
+        // SkillLink Brand Colors - Updated per specifications
+        blue: "#4CB3F8",     // Primary 1: Sky Blue - Friendly, calming base
+        yellow: "#F7C948",   // Primary 2: Warm Mustard Yellow - For CTAs, icons, badges
+        pink: "#F88F8F",     // Accent 2: Soft Coral Pink - For callouts, fun icons, gradients
+        navy: "#1E1E3F",     // Accent 1: Deep Indigo/Navy - For headlines, nav, footer
+        light: "#FFFDF6",    // Background: Eggshell Off-White - Clean, warm base
+        mint: "#CFF4D2",     // Supporting: Mint Green - For section dividers, badges
+        lavender: "#E6E6FA", // Supporting: Cool Lavender - For testimonial card backgrounds
+        gray: "#F0F0F0",     // Supporting: Light Gray - For input fields, borders, shadow
         
         // Shadcn Colors
         background: "hsl(var(--background))",

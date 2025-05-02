@@ -57,7 +57,7 @@ export function FloatingCTA() {
             <a href="#join-beta">
               <Button 
                 size="lg" 
-                className="bg-cyan text-navy font-semibold px-6 rounded-full shadow-lg hover:bg-cyan/90 transition-all"
+                className="bg-yellow text-navy font-semibold px-6 rounded-full shadow-lg hover:bg-yellow/90 transition-all"
               >
                 Join the Beta
               </Button>
@@ -65,7 +65,7 @@ export function FloatingCTA() {
             <Button 
               size="icon" 
               variant="outline" 
-              className="rounded-full bg-white border-2 border-gold h-12 w-12 shadow-lg hover:border-pink transition-all" 
+              className="rounded-full bg-white border-2 border-blue h-12 w-12 shadow-lg hover:border-pink transition-all" 
               onClick={scrollToTop}
             >
               <ArrowUp className="h-5 w-5 text-navy" />
