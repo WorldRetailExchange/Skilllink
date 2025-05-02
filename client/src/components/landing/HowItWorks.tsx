@@ -5,18 +5,27 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const steps = [
   {
     number: 1,
-    title: "Search & Discover",
-    description: "Browse activities by category, location, and availability or take our matching quiz."
+    emoji: "🔍",
+    title: "Discover & Match",
+    description: "Take our fun matching quiz to find activities, tutors and events that match your interests and location.",
+    color: "#FF5522",
+    bgColor: "#FFF2EC"
   },
   {
     number: 2,
-    title: "Connect & Inquire",
-    description: "Message providers, check availability, and get answers to your questions."
+    emoji: "📅",
+    title: "Book & Join",
+    description: "Schedule sessions, sign up for events, and connect with tutors - all in just a few clicks!",
+    color: "#FFCB05",
+    bgColor: "#FFFBEB"
   },
   {
     number: 3,
-    title: "Book & Attend",
-    description: "Schedule sessions, make payments, and start building new skills."
+    emoji: "🏆",
+    title: "Learn & Earn",
+    description: "Attend activities, collect SkillPoints, earn badges, and build your awesome student portfolio.",
+    color: "#1A1A1A",
+    bgColor: "#E5F3FF"
   }
 ];
 
@@ -33,11 +42,11 @@ const HowItWorks = () => {
           viewport={{ once: true, amount: 0.25 }}
           variants={fadeIn("up", "tween", 0.1, 1)}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-['Poppins']">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             How SkillLink Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A simple process to connect students with their perfect activities
+            Three simple steps to your learning adventure!
           </p>
         </motion.div>
 
@@ -56,14 +65,32 @@ const HowItWorks = () => {
                     viewport={{ once: true, amount: 0.25 }}
                     variants={fadeIn("up", "tween", 0.1 + index * 0.1, 1)}
                   >
-                    <div className="bg-primary text-white h-16 w-16 rounded-full flex items-center justify-center text-2xl font-bold mb-6 z-10">
-                      {step.number}
+                    <div 
+                      className={`text-white h-20 w-20 rounded-full flex items-center justify-center text-2xl font-bold mb-6 z-10`}
+                      style={{ backgroundColor: step.color }}
+                    >
+                      <span className="text-3xl">{step.emoji}</span>
                     </div>
-                    <div className="bg-white rounded-xl p-6 shadow-md text-center">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-3">{step.title}</h3>
+                    <div 
+                      className="rounded-xl p-6 shadow-md text-center border-t-4"
+                      style={{ 
+                        backgroundColor: step.bgColor,
+                        borderColor: step.color 
+                      }}
+                    >
+                      <h3 className="text-xl font-bold text-gray-800 mb-3">{step.title}</h3>
                       <p className="text-gray-600">
                         {step.description}
                       </p>
+                      
+                      <div className="mt-6 flex justify-center">
+                        <div 
+                          className="h-10 w-10 rounded-full flex items-center justify-center text-white text-lg font-bold"
+                          style={{ backgroundColor: step.color }}
+                        >
+                          {step.number}
+                        </div>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -82,11 +109,28 @@ const HowItWorks = () => {
                 viewport={{ once: true, amount: 0.25 }}
                 variants={fadeIn("right", "tween", 0.1 + index * 0.1, 1)}
               >
-                <div className="bg-primary text-white h-12 w-12 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
-                  {step.number}
+                <div 
+                  className="h-16 w-16 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0 text-white"
+                  style={{ backgroundColor: step.color }}
+                >
+                  <span className="text-2xl">{step.emoji}</span>
                 </div>
-                <div className="bg-white rounded-xl p-5 shadow-md flex-1">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">{step.title}</h3>
+                <div 
+                  className="rounded-xl p-5 shadow-md flex-1 border-l-4"
+                  style={{ 
+                    backgroundColor: step.bgColor,
+                    borderColor: step.color 
+                  }}
+                >
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-lg font-bold text-gray-800">{step.title}</h3>
+                    <div 
+                      className="h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+                      style={{ backgroundColor: step.color }}
+                    >
+                      {step.number}
+                    </div>
+                  </div>
                   <p className="text-gray-600 text-sm">
                     {step.description}
                   </p>

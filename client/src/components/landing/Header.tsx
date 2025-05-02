@@ -24,36 +24,36 @@ const Header = () => {
   return (
     <header 
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-white border-b border-gray-200 shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-white/90 backdrop-blur-sm border-b border-gray-200 shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 bg-primary text-white flex items-center justify-center rounded-md">
-              <i className="fas fa-graduation-cap"></i>
+            <div className="h-10 w-10 bg-primary text-white flex items-center justify-center rounded-full">
+              <span className="text-xl">🎓</span>
             </div>
-            <span className="text-xl font-semibold text-gray-800 font-['Poppins']">SkillLink</span>
+            <span className="text-2xl font-bold text-gray-800">SkillLink</span>
           </div>
 
           <nav className="hidden md:flex space-x-8">
-            <a href="#features" className="text-sm font-medium text-gray-600 hover:text-primary transition">
+            <a href="#features" className="text-base font-medium text-gray-600 hover:text-primary transition">
               Features
             </a>
-            <a href="#how-it-works" className="text-sm font-medium text-gray-600 hover:text-primary transition">
-              How It Works
+            <a href="#portfolio" className="text-base font-medium text-gray-600 hover:text-primary transition">
+              Student Portfolio
             </a>
-            <a href="#environmental" className="text-sm font-medium text-gray-600 hover:text-primary transition">
-              Environmental Initiative
+            <a href="#events" className="text-base font-medium text-gray-600 hover:text-primary transition">
+              Events
             </a>
-            <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-primary transition">
-              Contact
+            <a href="#tutors" className="text-base font-medium text-gray-600 hover:text-primary transition">
+              Find Tutors
             </a>
           </nav>
 
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary/90 text-white">
-              Get Early Access
+            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full">
+              Join the Beta
             </Button>
           </div>
 
@@ -73,7 +73,7 @@ const Header = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-white border-b border-gray-200"
+          className="md:hidden bg-white/95 backdrop-blur-sm border-b border-gray-200"
         >
           <div className="px-4 py-4 space-y-4">
             <a
@@ -84,28 +84,28 @@ const Header = () => {
               Features
             </a>
             <a
-              href="#how-it-works"
+              href="#portfolio"
               className="block text-gray-600 hover:text-primary py-2"
               onClick={toggleMobileMenu}
             >
-              How It Works
+              Student Portfolio
             </a>
             <a
-              href="#environmental"
+              href="#events"
               className="block text-gray-600 hover:text-primary py-2"
               onClick={toggleMobileMenu}
             >
-              Environmental Initiative
+              Events
             </a>
             <a
-              href="#contact"
+              href="#tutors"
               className="block text-gray-600 hover:text-primary py-2"
               onClick={toggleMobileMenu}
             >
-              Contact
+              Find Tutors
             </a>
-            <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-              Get Early Access
+            <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full">
+              Join the Beta
             </Button>
           </div>
         </motion.div>

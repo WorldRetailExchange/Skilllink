@@ -3,6 +3,68 @@
 @tailwind utilities;
 
 :root {
+  --skilllink-peach: #FFF2EC;
+  --skilllink-yellow: #FFCB05;
+  --skilllink-blue: #E5F3FF;
+  --skilllink-coral: #FF5522;
+  --skilllink-navy: #1A1A1A;
+}
+
+/* Override primary color to match SkillLink coral */
+.bg-primary, .text-primary, .border-primary {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  --tw-border-opacity: 1;
+  background-color: rgb(255 85 34 / var(--tw-bg-opacity));
+  color: rgb(255 85 34 / var(--tw-text-opacity));
+  border-color: rgb(255 85 34 / var(--tw-border-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 85 34 / var(--tw-bg-opacity));
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(255 85 34 / var(--tw-text-opacity));
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 85 34 / var(--tw-border-opacity));
+}
+
+/* Hover states */
+.hover\:bg-primary\/90:hover {
+  background-color: rgb(255 85 34 / 0.9);
+}
+
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 85 34 / var(--tw-text-opacity));
+}
+
+.hover\:border-primary:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 85 34 / var(--tw-border-opacity));
+}
+
+/* Accent colors */
+.bg-primary\/10 {
+  background-color: rgb(255 85 34 / 0.1);
+}
+
+/* Font family adjustments */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka One', 'Comic Neue', sans-serif;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+:root {
       --background: 0 0% 100%;
 --foreground: 20 14.3% 4.1%;
 --muted: 60 4.8% 95.9%;

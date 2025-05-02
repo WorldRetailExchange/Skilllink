@@ -1,0 +1,85 @@
+🎯 Prompt for Replit: Build SkillLink Website
+Project Type:
+Responsive, animated one-page website for a startup called SkillLink.
+
+What is SkillLink?
+SkillLink is a vibrant, student-first discovery and learning platform — think LinkedIn + BookMyShow + Duolingo for kids. It helps students (ages 10–18) discover tutors, join events, earn rewards, and build personal portfolios.
+
+🎨 Design & Theme Guidelines
+Audience: School students (10–18), urban parents, tutors, schools
+
+Tone: Playful, bold, colorful — but clean and smart
+
+Colors:
+
+Base: Light pastels like peach (#FFF2EC), yellow (#FFCB05), soft blue (#E5F3FF)
+
+Accent: Vibrant coral/red-orange (#FF5522), deep navy (#1A1A1A)
+
+Use gradients, soft rounded corners, and modern typography
+
+Font Suggestions:
+
+Headers: Fredoka One / Comic Neue (fun and bold)
+
+Body: Inter or Poppins (clean and legible)
+
+🧩 Core Features to Include
+🎓 Student Portfolio (Like LinkedIn)
+
+Each student has a profile
+
+Displays their school, interests, skill badges, class history, and events attended
+
+Gamified progress with SkillPoints and badges
+
+🎟️ Events Marketplace (Like BookMyShow)
+
+Local workshops, meetups, open mics, coding camps
+
+Book & join events
+
+Host events as well (tutors or student clubs)
+
+💡 Tutor Discovery
+
+Parents or students can search for verified local tutors
+
+In-app booking, reviews, and payments (future roadmap)
+
+🏅 Skill Badges + Points
+
+Students earn SkillPoints and visual badges for completing sessions, events, and challenges
+
+Helps them build a visible identity for their learning journey
+
+🤝 Community & Collaboration
+
+Local peer groups, clubs, book circles, student meetups
+
+Encourages offline connection with online discovery
+
+🔍 Strategic Messaging to Include
+Hero Message:
+“SkillLink — A playful world where students build skills, explore passions & connect with mentors.”
+
+Value Props (Visually spaced or animated):
+
+“Build your learning identity”
+
+“Discover activities around you”
+
+“Celebrate effort with SkillPoints”
+
+“Trusted by tutors, parents & schools”
+
+🚀 Bonus Features (if possible)
+Smooth scroll-based animations
+
+Section transitions with illustrations
+
+Fun, friendly icons and emoji where appropriate
+
+“Get Started” or “Join the Beta” CTA buttons
+
+Mobile-optimized layout
