@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/motion";
+import { Leaf, CheckCircle2, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const EnvironmentalInitiative = () => {
   return (
@@ -16,7 +18,7 @@ const EnvironmentalInitiative = () => {
             <img 
               src="https://images.unsplash.com/photo-1532667449560-72a95c8d381b?w=800&auto=format&fit=crop&q=80" 
               alt="Students participating in environmental workshop" 
-              className="rounded-lg shadow-lg w-full" 
+              className="rounded-lg shadow-skilllink w-full" 
             />
           </motion.div>
           
@@ -27,33 +29,41 @@ const EnvironmentalInitiative = () => {
             viewport={{ once: true, amount: 0.25 }}
             variants={fadeIn("left", "tween", 0.2, 1)}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[#059669] bg-opacity-10 text-[#059669] mb-4">
-              <i className="fas fa-leaf mr-2"></i> Green Future Initiative
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-mint/30 text-navy mb-4">
+              <Leaf className="mr-2 h-4 w-4" /> Green Future Initiative
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 font-['Poppins']">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
               Our Environmental Education Promise
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-700 mb-6">
               SkillLink is partnering with environmental experts to bring sustainability workshops to schools across the region. For every school that joins our platform:
             </p>
             <ul className="space-y-4 mb-8">
               <li className="flex">
-                <i className="fas fa-check-circle text-[#059669] mt-1 mr-3 text-xl"></i>
-                <p className="text-gray-600">We provide a free environmental awareness workshop for students</p>
+                <CheckCircle2 className="text-mint mt-1 mr-3 h-5 w-5" />
+                <p className="text-gray-700">We provide a free environmental awareness workshop for students</p>
               </li>
               <li className="flex">
-                <i className="fas fa-check-circle text-[#059669] mt-1 mr-3 text-xl"></i>
-                <p className="text-gray-600">Students receive hands-on sustainability training and certificates</p>
+                <CheckCircle2 className="text-mint mt-1 mr-3 h-5 w-5" />
+                <p className="text-gray-700">Students receive hands-on sustainability training and certificates</p>
               </li>
               <li className="flex">
-                <i className="fas fa-check-circle text-[#059669] mt-1 mr-3 text-xl"></i>
-                <p className="text-gray-600">Schools can participate in our Green School Certification program</p>
+                <CheckCircle2 className="text-mint mt-1 mr-3 h-5 w-5" />
+                <p className="text-gray-700">Schools can participate in our Green School Certification program</p>
               </li>
             </ul>
-            <a href="#contact" className="inline-flex items-center text-[#059669] hover:text-[#047857] font-medium">
-              Learn more about our environmental partnership
-              <i className="fas fa-arrow-right ml-2"></i>
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <Button
+                className="bg-yellow hover:bg-yellow/90 text-navy font-medium shadow-md rounded-md"
+                asChild
+              >
+                <a href="#contact">Partner with us</a>
+              </Button>
+              <a href="#contact" className="inline-flex items-center text-blue hover:text-blue/80 font-medium">
+                Learn more
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
