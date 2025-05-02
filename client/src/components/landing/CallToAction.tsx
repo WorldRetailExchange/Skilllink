@@ -5,7 +5,7 @@ import { fadeIn } from "@/lib/motion";
 const CallToAction = () => {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-pink via-gold to-cyan opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue via-yellow to-pink opacity-90"></div>
       <div className="absolute inset-0 opacity-20" style={{ 
         backgroundImage: 'url("https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=1200&auto=format&fit=crop&q=80")',
         backgroundSize: 'cover', 
@@ -29,7 +29,7 @@ const CallToAction = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-xl border border-white/20">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-skilllink border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className="text-white text-4xl mb-3 group-hover:animate-bounce">🎯</div>
@@ -50,12 +50,12 @@ const CallToAction = () => {
             
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
               <a href="#join-beta">
-                <Button size="lg" className="bg-white hover:bg-gray-100 px-8 rounded-full w-full md:w-auto font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink to-cyan border-2 border-white hover:border-cyan transition-all duration-300">
+                <Button size="lg" className="bg-yellow hover:bg-yellow/90 px-8 rounded-full w-full md:w-auto font-bold text-navy shadow-md transition-all duration-300">
                   Join the Beta
                 </Button>
               </a>
               <a href="#contact">
-                <Button size="lg" variant="outline" className="border-2 border-white hover:bg-white/10 text-white px-8 rounded-full w-full md:w-auto font-bold hover:border-pink transition-all duration-300">
+                <Button size="lg" variant="outline" className="border-2 border-white hover:bg-white/10 text-white px-8 rounded-full w-full md:w-auto font-bold hover:border-yellow transition-all duration-300 shadow-md">
                   Partner With Us
                 </Button>
               </a>
@@ -63,7 +63,7 @@ const CallToAction = () => {
           </div>
           
           <div className="text-center mt-8">
-            <p className="text-white/70 text-sm">Already have an invite? <a href="#" className="text-white underline hover:text-cyan transition-colors duration-300">Sign in here</a></p>
+            <p className="text-white/70 text-sm">Already have an invite? <a href="#" className="text-white underline hover:text-blue transition-colors duration-300">Sign in here</a></p>
           </div>
         </motion.div>
       </div>

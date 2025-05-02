@@ -8,24 +8,24 @@ const steps = [
     emoji: "🔍",
     title: "Discover & Match",
     description: "Take our fun matching quiz to find activities, tutors and events that match your interests and location.",
-    color: "#FF5522",
-    bgColor: "#FFF2EC"
+    color: "var(--skilllink-blue)",
+    bgColor: "#E5F5FF"
   },
   {
     number: 2,
     emoji: "📅",
     title: "Book & Join",
     description: "Schedule sessions, sign up for events, and connect with tutors - all in just a few clicks!",
-    color: "#FFCB05",
-    bgColor: "#FFFBEB"
+    color: "var(--skilllink-yellow)",
+    bgColor: "#FFFAEE"
   },
   {
     number: 3,
     emoji: "🏆",
     title: "Learn & Earn",
     description: "Attend activities, collect SkillPoints, earn badges, and build your awesome student portfolio.",
-    color: "#1A1A1A",
-    bgColor: "#E5F3FF"
+    color: "var(--skilllink-pink)",
+    bgColor: "#FFF0F0"
   }
 ];
 
@@ -42,10 +42,10 @@ const HowItWorks = () => {
           viewport={{ once: true, amount: 0.25 }}
           variants={fadeIn("up", "tween", 0.1, 1)}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
             How SkillLink Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Three simple steps to your learning adventure!
           </p>
         </motion.div>
@@ -54,7 +54,7 @@ const HowItWorks = () => {
           {/* Process Steps Desktop */}
           {!isMobile && (
             <div className="hidden md:block">
-              <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-1 bg-gray-200"></div>
+              <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-1 bg-gray"></div>
               <div className="grid grid-cols-3 gap-8 relative">
                 {steps.map((step, index) => (
                   <motion.div 
@@ -66,26 +66,23 @@ const HowItWorks = () => {
                     variants={fadeIn("up", "tween", 0.1 + index * 0.1, 1)}
                   >
                     <div 
-                      className={`text-white h-20 w-20 rounded-full flex items-center justify-center text-2xl font-bold mb-6 z-10`}
+                      className={`text-white h-20 w-20 rounded-full flex items-center justify-center text-2xl font-bold mb-6 z-10 shadow-md`}
                       style={{ backgroundColor: step.color }}
                     >
                       <span className="text-3xl">{step.emoji}</span>
                     </div>
                     <div 
-                      className="rounded-xl p-6 shadow-md text-center border-t-4"
-                      style={{ 
-                        backgroundColor: step.bgColor,
-                        borderColor: step.color 
-                      }}
+                      className="rounded-xl p-6 shadow-skilllink text-center border-t-4 hover:shadow-lg transition-shadow duration-300 bg-white"
+                      style={{ borderColor: step.color }}
                     >
-                      <h3 className="text-xl font-bold text-gray-800 mb-3">{step.title}</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-xl font-bold text-navy mb-3">{step.title}</h3>
+                      <p className="text-gray-700">
                         {step.description}
                       </p>
                       
                       <div className="mt-6 flex justify-center">
                         <div 
-                          className="h-10 w-10 rounded-full flex items-center justify-center text-white text-lg font-bold"
+                          className="h-10 w-10 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-sm"
                           style={{ backgroundColor: step.color }}
                         >
                           {step.number}
@@ -110,28 +107,25 @@ const HowItWorks = () => {
                 variants={fadeIn("right", "tween", 0.1 + index * 0.1, 1)}
               >
                 <div 
-                  className="h-16 w-16 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0 text-white"
+                  className="h-16 w-16 rounded-full flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0 text-white shadow-md"
                   style={{ backgroundColor: step.color }}
                 >
                   <span className="text-2xl">{step.emoji}</span>
                 </div>
                 <div 
-                  className="rounded-xl p-5 shadow-md flex-1 border-l-4"
-                  style={{ 
-                    backgroundColor: step.bgColor,
-                    borderColor: step.color 
-                  }}
+                  className="rounded-xl p-5 shadow-skilllink flex-1 border-l-4 bg-white"
+                  style={{ borderColor: step.color }}
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-lg font-bold text-gray-800">{step.title}</h3>
+                    <h3 className="text-lg font-bold text-navy">{step.title}</h3>
                     <div 
-                      className="h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+                      className="h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-sm"
                       style={{ backgroundColor: step.color }}
                     >
                       {step.number}
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-700 text-sm">
                     {step.description}
                   </p>
                 </div>
